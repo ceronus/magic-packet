@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Exe</OutputType>
+
+		<!-- Publish Configurations -->
+		<PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
+		<DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+		<DebugType Condition="'$(Configuration)' == 'Release'">None</DebugType>
+
+		<!-- Assembly Information -->
+		<RootNamespace>MagicPacket.UserInterface</RootNamespace>
+		<AssemblyName>MagicPacket</AssemblyName>
+		<AssemblyTitle>Magic Packet - Wake On LAN</AssemblyTitle>
+
+		<!-- Package Information -->
+		<Title>Magic Packet - Wake On LAN</Title>
+		<Description></Description>
+		<Authors>Ken Svensson</Authors>
+		<Company>Ceronus</Company>
+		<Copyright>Copyright © Ceronus 2022</Copyright>
+		<RepositoryUrl>github.com/ceronus/magic-packet</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageIcon>icon.png</PackageIcon>
+		<ApplicationIcon>icon.ico</ApplicationIcon>
+		
+	</PropertyGroup>
+
+	<!-- Configuration File Outputs -->
+	<ItemGroup>
+		<None Update="configuration.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="debug.configuration.json">
+			<CopyToOutputDirectory Condition="'$(Configuration)' == 'Debug'">Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

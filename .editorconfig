@@ -1,0 +1,39 @@
+﻿[*.cs]
+
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = warning
+
+# IDE0160: Convert to block scoped namespace
+csharp_style_namespace_declarations = file_scoped
+
+# IDE0022: Use block body for methods
+dotnet_diagnostic.IDE0022.severity = warning
+csharp_style_expression_bodied_methods = when_on_single_line
+
+# IDE0058: Expression value is never used
+dotnet_diagnostic.IDE0058.severity = silent
+
+# IDE0011: Add braces
+dotnet_diagnostic.IDE0011.severity = suggestion
+csharp_prefer_braces = when_multiline
+
+# IDE0021: Use block body for constructors
+dotnet_diagnostic.IDE0021.severity = silent
+
+# IDE0046: Convert to conditional expression
+dotnet_diagnostic.IDE0046.severity = suggestion
+
+# CA1848: Use the LoggerMessage delegates
+dotnet_diagnostic.CA1848.severity = silent
+
+# CA2254: Template should be a static expression
+dotnet_diagnostic.CA2254.severity = silent
+
+# IDE0061: Use block body for local functions
+csharp_style_expression_bodied_local_functions = when_on_single_line
+
+# IDE0010: Add missing cases
+dotnet_diagnostic.IDE0010.severity = suggestion
+
+# CA1727: Use PascalCase for named placeholders
+dotnet_diagnostic.CA1727.severity = suggestion

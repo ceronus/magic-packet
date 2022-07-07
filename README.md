@@ -1,6 +1,6 @@
 # ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png) Magic Packet
-[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 [![NuGet version (MagicPacket)](https://img.shields.io/nuget/v/magicpacket?style=for-the-badge)](https://www.nuget.org/packages/magicpacket/)  
+[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 

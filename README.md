@@ -4,20 +4,20 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 [![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
-# Portable Binary Downloads
+## Portable Binary Downloads
 There are portable binaries for the following platforms:
 
-Windows
+#### Windows
 - [Windows 64-bit (win-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x64.zip)
 - [Windows 32-bit (win-x86)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x86.zip)
 - [Windows ARM 32-bit (win-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm.zip)
 - [Windows ARM 64-bit (win-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm64.zip)
 
-Linux
+#### Linux
 - [Linux 64-bit (linux-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-x64.zip)
 - [Linux ARM 32-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-arm.zip)
 
-macOS
+#### macOS
 - [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/osx-x64.zip)
 
 For previous releases you can find them [here](https://github.com/ceronus/magic-packet/releases).

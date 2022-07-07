@@ -24,8 +24,9 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 ## How to Use
 1. Download the [portable executable file](https://github.com/ceronus/magic-packet#portable-binary-downloads) for your platform or compile the program from the source.
-2. Open `configuration.json` to configure the target machine MAC address that you wish to send the magic packet to
-3. Run the `MagicPacket.exe`
+2. Open `configuration.json` using a text editor (e.g. Notepad).
+3. Set the values in the configuration file. At the minimum, define the value for target machine MAC address.
+4. Run the application! (`MagicPacket.exe`).
 
 
 #### Configuration File

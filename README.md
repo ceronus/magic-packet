@@ -30,7 +30,7 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as
 ```
 ./MagicPacket.exe --target 00:00:00:00:00:00
-```.
+```
 
 *Note: Any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.*
 

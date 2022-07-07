@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9CF0EB37-A229-47A3-BF64-7FA74F9256BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPacket.UserInterface", "src\UserInterface.Console\MagicPacket.UserInterface.csproj", "{A2E8B6AB-3C58-40BC-B8AC-7EC9BF35A632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPacket", "src\UserInterface.Console\MagicPacket.csproj", "{A2E8B6AB-3C58-40BC-B8AC-7EC9BF35A632}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EF85EC1-22C4-46F1-91D4-95AD9DA0967E}"
 	ProjectSection(SolutionItems) = preProject

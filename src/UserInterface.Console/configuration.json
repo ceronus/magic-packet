@@ -1,0 +1,18 @@
+{
+  // Note. All of these values will be overridden if explicity 
+  // defined through the arguments when calling the process.
+  // Example:
+  //    ./MagicPacket.exe --Target 00:00:00:00:00:00
+
+  // Required. The target MAC address, in hexadecimal format
+  // The value can be separated with colons (:) dashes (-), or spaces ( ).
+  "Target": "00-00-00-00-00-00",
+
+  // Optional. The IPv4 broadcast address.
+  // If there is no value defined, all available network interfaces will be used.
+  "Broadcast": "",
+
+  // Optional. The SecureOn password, in hexadecimal format.
+  // If the value is defined, the value must fit into a 4 or 6 bytes.
+  "Password": ""
+}

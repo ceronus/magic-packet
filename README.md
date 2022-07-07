@@ -7,6 +7,7 @@ address, for a total of 102 bytes.
 Since the magic packet is only scanned for the string above, and not actually parsed by a full protocol stack, it could be
 sent as payload of any network- and transport-layer protocol, although it is typically sent as a UDP datagram to port 0 
 (reserved port number), 7 (Echo Protocol) or 9 (Discard Protocol), or directly over Ethernet as EtherType 0x0842.
+
 A connection-oriented transport-layer protocol like TCP is less suited for this task as it requires establishing an active 
 connection before sending user data.
 

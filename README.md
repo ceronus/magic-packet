@@ -2,7 +2,7 @@
 
 # ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png) Magic Packet
 
-A light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
+A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
 
 ## Standards and References

@@ -1,11 +1,10 @@
 # ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png) Magic Packet
+[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
-[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
-
-### Features
+#### Features
 - Supports use of Secure-On passwords.
 - Configuration file for easy setup and use.
 - On-demand configuration as arguments (bypass the configuration file).
@@ -18,7 +17,7 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 ***Note: The default behavior is to broadcast on every network interface, to change this, explicity define the broadcast endpoint in the configuration file or as an input argument when running the application.*
 
-### Known Limitations
+#### Known Limitations
 - The current release does not send using `EtherType 0x0842`.
 - Networks that exclusively use IPv6 only, reqiure manual definition the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
 
@@ -29,7 +28,7 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 3. Run the `MagicPacket.exe`
 
 
-### Configuration File
+#### Configuration File
 The configuration file is in a JSON with comments format.
 The comments are there to help guide you. (In the below snippet, the comments have been removed for a cleaner documentation of the file format.)
 
@@ -48,7 +47,7 @@ The comments are there to help guide you. (In the below snippet, the comments ha
 *Note: All of these values will be overridden if explicity defined through the arguments when calling the process.*
 
 
-### On-Demand Configuration
+#### On-Demand Configuration
 As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as:
 ```
 ./MagicPacket.exe --target 00:00:00:00:00:00

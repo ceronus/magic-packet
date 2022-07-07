@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPacket", "src\Library\MagicPacket.csproj", "{B83D2BF6-D1DB-440C-9086-544B0AB62DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "src\Library\Library.csproj", "{B83D2BF6-D1DB-440C-9086-544B0AB62DFB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicPacket.ConsoleApp", "src\ConsoleApp\MagicPacket.ConsoleApp.csproj", "{08528302-49F5-47E2-B373-0C7D20E858B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "src\ConsoleApp\ConsoleApp.csproj", "{08528302-49F5-47E2-B373-0C7D20E858B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,7 +15,6 @@
 		<!-- Assembly Information -->
 		<RootNamespace>MagicPacket.ConsoleApp</RootNamespace>
 		<AssemblyName>MagicPacket</AssemblyName>
-		<AssemblyTitle>MagicPacket</AssemblyTitle>
 
 		<!-- Package Information -->
 		<Version>1.0.0</Version>
@@ -38,7 +37,7 @@
 	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Library\MagicPacket.csproj" />
+	  <ProjectReference Include="..\Library\Library.csproj" />
 	</ItemGroup>
 
 	<!-- Configuration File Outputs -->

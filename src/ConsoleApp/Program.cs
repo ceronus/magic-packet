@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace MagicPacket;
+namespace MagicPacket.ConsoleApp;
 
 public class Program
 {

@@ -13,8 +13,7 @@
 
 		<!-- Assembly Information -->
 		<RootNamespace>MagicPacket</RootNamespace>
-		<AssemblyName>MagicPacket</AssemblyName>
-		<AssemblyTitle>MagicPacket</AssemblyTitle>
+		<AssemblyName>MagicPacket.Library</AssemblyName>
 
 		<!-- Package Information -->
 		<Version>1.0.0</Version>

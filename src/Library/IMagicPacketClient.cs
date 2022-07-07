@@ -2,7 +2,8 @@
 using System.Net.NetworkInformation;
 
 namespace MagicPacket;
-public interface IMagicPacketClient
+
+public interface IMagicPacketClient : IDisposable
 {
     Task BroadcastOnAllInterfacesAsync(PhysicalAddress target, string? password = null, CancellationToken cancellationToken = default);
     Task BroadcastOnAllInterfacesAsync(string target, CancellationToken cancellationToken = default);

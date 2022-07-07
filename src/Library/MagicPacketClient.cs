@@ -6,7 +6,7 @@ using System.Net.Sockets;
 
 namespace MagicPacket;
 
-public class MagicPacketClient : IDisposable, IMagicPacketClient
+public class MagicPacketClient : IMagicPacketClient
 {
     private const int ReservedPortNumber = 0;
     private const int EchoProtocolPortNumber = 7;

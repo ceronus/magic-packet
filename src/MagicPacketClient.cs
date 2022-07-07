@@ -89,6 +89,7 @@ public class MagicPacketClient : IDisposable
     {
         byte[] frame = CreateMagicPacketFrame(target, password);
         Debug.Assert(string.IsNullOrWhiteSpace(password) && frame.Length == 102);
+        Debug.Assert(!string.IsNullOrWhiteSpace(password) && (frame.Length == 106 || frame.Length == 108));
 
         // Reserved
         await SendDatagramAsync(frame, broadcast, ReservedPortNumber, cancellationToken).ConfigureAwait(false);

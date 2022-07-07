@@ -2,6 +2,9 @@
 
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
+[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
+
+
 ### Features
 - Supports use of Secure-On passwords.
 - Configuration file for easy setup and use.
@@ -18,8 +21,6 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 ### Known Limitations
 - The current release does not send using `EtherType 0x0842`.
 - Networks that exclusively use IPv6 only, reqiure manual definition the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
-
-[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
 
 ## How to Use

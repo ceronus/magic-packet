@@ -21,6 +21,38 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 [![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
+
+## How to Use
+1. Download the [portable executable file](https://github.com/ceronus/magic-packet#portable-binary-downloads) for your platform or compile the program from the source.
+2. Open `configuration.json` to configure the target machine MAC address that you wish to send the magic packet to
+3. Run the `MagicPacket.exe`
+
+As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as
+```
+./MagicPacket.exe --target 00:00:00:00:00:00
+```.
+
+*Note: Any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.*
+
+### Configuration File
+The configuration file is in a JSON with comments format.
+The comments are there to help guide you. (In the below snippet, the comments have been removed for a cleaner documentation of the file format.)
+
+```json
+{
+  "Target": "00-00-00-00-00-00",
+  "Broadcast": "",
+  "Password": ""
+}
+```
+
+- **`Target` (Required)**. The target MAC address, in hexadecimal format. The value can be separated with colons (:) dashes (-), or spaces ( ).
+- **`Broadcast`)** *(Optional)*. The IPv4 broadcast address. If there is no value defined, all available network interfaces will be used.
+- **Password** *(Optional)*. The SecureOn password, in hexadecimal format. If the value is defined, the value must fit into a 4 or 6 bytes.
+
+*Note: All of these values will be overridden if explicity defined through the arguments when calling the process.*
+
+
 ## Portable Binary Downloads
 There are portable binaries for the following platforms:
 
@@ -38,39 +70,6 @@ There are portable binaries for the following platforms:
   - [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/osx-x64.zip)
 
 For previous releases you can find them [here](https://github.com/ceronus/magic-packet/releases).
-
-
-## How to Use
-1. Download the [portable executable file](https://github.com/ceronus/magic-packet#portable-binary-downloads) for your platform or compile the program from the source.
-2. Open `configuration.json` to configure the target machine MAC address that you wish to send the magic packet to
-3. Run the `MagicPacket.exe`
-
-As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as `--target 00:00:00:00:00:00`.
-Note that any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.
-
-### Configuration File
-The configuration file is quite simple, it has 
-```json
-{
-  // Note. All of these values will be overridden if explicity 
-  // defined through the arguments when calling the process.
-  // Example:
-  //    ./MagicPacket.exe --Target 00:00:00:00:00:00
-
-  // Required. The target MAC address, in hexadecimal format
-  // The value can be separated with colons (:) dashes (-), or spaces ( ).
-  "Target": "00-00-00-00-00-00",
-
-  // Optional. The IPv4 broadcast address.
-  // If there is no value defined, all available network interfaces will be used.
-  "Broadcast": "",
-
-  // Optional. The SecureOn password, in hexadecimal format.
-  // If the value is defined, the value must fit into a 4 or 6 bytes.
-  "Password": ""
-}
-```
-
 
 
 ## Standards and References

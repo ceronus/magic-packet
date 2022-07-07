@@ -16,9 +16,11 @@
 		<AssemblyName>MagicPacket.Library</AssemblyName>
 
 		<!-- Package Information -->
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<Title>Magic Packet</Title>
 		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		
 		<Authors>Ken Svensson</Authors>
 		<Company>Ceronus</Company>
 		<Copyright>Copyright © Ceronus 2022</Copyright>
@@ -31,7 +33,7 @@
 		<PackageIcon>icon-256x256.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-		<PackageIconUrl>https://github.com/ceronus/magic-packet/icons/icon-64x64.png</PackageIconUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png</PackageIconUrl>
 
 	</PropertyGroup>
 	

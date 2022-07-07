@@ -36,7 +36,7 @@ await client.BroadcastOnAllInterfacesAsync(target);
 
 #### Useful Links
 Please take a look at the [example implementation source code](https://github.com/ceronus/magic-packet/tree/master/src/ConsoleApp)
-or you may want the [ready-to-go cross-platform portable binaries](https://github.com/ceronus/magic-packet).
+or you may want the [ready-to-go cross-platform portable binaries](https://github.com/ceronus/magic-packet#portable-binary-downloads).
 
 -------------------------------------------
 

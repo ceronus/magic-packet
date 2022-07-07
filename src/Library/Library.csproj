@@ -16,7 +16,7 @@
 		<AssemblyName>MagicPacket</AssemblyName>
 
 		<!-- Package Information -->
-		<Version>1.1.3</Version>
+		<Version>1.1.4</Version>
 		<Title>Magic Packet</Title>
 		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
 		<NeutralLanguage>en-US</NeutralLanguage>
@@ -29,7 +29,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<IsPackable>true</IsPackable>
 		
-		<PackageTags>wol</PackageTags>
+		<PackageTags>WakeOnLan, wol, magic packet, wake on lan</PackageTags>
 		<PackageIcon>icon-256x256.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>

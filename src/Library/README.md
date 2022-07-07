@@ -4,24 +4,6 @@
 
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
-
-#### Features
-- Supports use of Secure-On passwords.
-- Configuration file for easy setup and use.
-- On-demand configuration as arguments (bypass the configuration file).
-- Supports multiple network interfaces**.
-- Supports targeting machines on remote networks (explicity define the broadcast address).
-- Broadcasts on the following ports:
-  - Reserved Port Number (Port 0)
-  - Echo Protocol (Port 7)
-  - Discard Protocol (Port 9)
-
-***Note: The default behavior is to broadcast on every network interface, to change this, explicity define the broadcast endpoint in the configuration file or as an input argument when running the application.*
-
-#### Known Limitations
-- The current release does not send using `EtherType 0x0842`.
-- Networks that exclusively use IPv6 only, are supported, but require manual definition of the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
-
 -------------------------------------------
 
 ## How to Use
@@ -38,7 +20,23 @@ await client.BroadcastOnAllInterfacesAsync(target);
 Please take a look at the [example implementation source code](https://github.com/ceronus/magic-packet/tree/master/src/ConsoleApp)
 or you may want the [ready-to-go cross-platform portable binaries](https://github.com/ceronus/magic-packet#portable-binary-downloads).
 
+#### Features
+- Supports use of Secure-On passwords.
+- Supports multiple network interfaces**.
+- Supports targeting machines on remote networks (explicity define the broadcast address).
+- Broadcasts on the following ports:
+  - Reserved Port Number (Port 0)
+  - Echo Protocol (Port 7)
+  - Discard Protocol (Port 9)
+
+***Note: The default behavior is to broadcast on every network interface, to change this, explicity define the broadcast endpoint in the configuration file or as an input argument when running the application.*
+
+#### Known Limitations
+- The current release does not send using `EtherType 0x0842`.
+- Networks that exclusively use IPv6 only, are supported, but require manual definition of the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
+
 -------------------------------------------
+
 
 ## Standards and References
 This implementation follows the specifications outlined in the 

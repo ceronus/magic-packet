@@ -16,7 +16,8 @@ public static class ArgumentsParser
 
         try
         {
-            return (T)Convert.ChangeType(argument.Value, typeof(T), CultureInfo.InvariantCulture);
+            Type type = Nullable.GetUnderlyingType(typeof(T)) ?? typeof(T);
+            return (T)Convert.ChangeType(argument.Value, type, CultureInfo.InvariantCulture);
         }
         catch
         {

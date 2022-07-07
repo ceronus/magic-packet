@@ -148,8 +148,8 @@ public class MagicPacketClient : IMagicPacketClient
 
     public static string CleanMacAddressString(ReadOnlySpan<char> value)
     {
-        if (value == null || value.Length == 0) throw new ArgumentException("Invalid input. The value is not defined.", nameof(value));
-        if (value.Length < 12) throw new ArgumentException($"Invalid input. The length of the MAC address is too short.");
+        if (value == null || value.Length == 0) throw new ArgumentException("The value is not defined.", nameof(value));
+        if (value.Length < 12) throw new ArgumentException($"The length of the MAC address is too short.");
 
         List<char> clean = new();
 
@@ -188,11 +188,11 @@ public class MagicPacketClient : IMagicPacketClient
                     break;
 
                 default:
-                    throw new ArgumentException($"Invalid input. The character '{value[i]}' is not a valid hexadecimal value.");
+                    throw new ArgumentException($"The character '{value[i]}' is not a valid hexadecimal or separator value.");
             }
         }
 
-        if (clean.Count != 12) throw new ArgumentException($"Invalid input. The length of the MAC address is too long.");
+        if (clean.Count != 12) throw new ArgumentException($"The length of the MAC address is invalid.");
 
         return new string(clean.ToArray());
     }

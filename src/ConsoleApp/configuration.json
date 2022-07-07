@@ -14,5 +14,10 @@
 
   // Optional. The SecureOn password, in hexadecimal format.
   // If the value is defined, the value must fit into a 4 or 6 bytes.
-  "Password": ""
+  "Password": "",
+
+  // Optional. The timeout (in milliseconds) for the process to complete.
+  // The value can be an integer value between 0 to 65,535. 
+  // Where a value of zero (or not defined) equals no limit.
+  "Timeout": 0
 }

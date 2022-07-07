@@ -38,13 +38,15 @@ The comments are there to help guide you. (In the below snippet, the comments ha
 {
   "Target": "00-00-00-00-00-00",
   "Broadcast": "",
-  "Password": ""
+  "Password": "",
+  "Timeout": 0
 }
 ```
 
-- **Target (Required)**. The target MAC address, in hexadecimal format. The value can be separated with colons (:) dashes (-), or spaces ( ).
+- **Target *(Required)***. The target MAC address, in hexadecimal format. The value can be separated with colons (:) dashes (-), or spaces ( ).
 - **Broadcast** *(Optional)*. The IPv4 broadcast address. If there is no value defined, all available network interfaces will be used.
 - **Password** *(Optional)*. The SecureOn password, in hexadecimal format. If the value is defined, the value must fit into a 4 or 6 bytes.
+- **Timeout** *(Optional)*. The timeout (in milliseconds) for the process to complete. The value can be an integer value between 0 to 65,535. Where a value of zero (or not defined) equals no limit.
 
 *Note: All of these values will be overridden if explicity defined through the arguments when calling the process.*
 

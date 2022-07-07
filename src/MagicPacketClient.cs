@@ -130,8 +130,6 @@ public class MagicPacketClient : IDisposable
         {
             Console.WriteLine($"Broadcast failed.{Environment.NewLine}" +
                 $"   {ex.Message} ({address}:{port})");
-
-            await Task.Delay(1000, cancellationToken).ConfigureAwait(false);
         }
     }
 

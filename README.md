@@ -1,6 +1,7 @@
-# ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-32x32.png) Magic Packet
+![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png)
+# Magic Packet
 
-//[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
+[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
 The magic packet is a frame that is most often sent as a broadcast and that contains anywhere within its payload 6 bytes 
 of all 255 (`FF FF FF FF FF FF` in hexadecimal), followed by 16 repetitions of the target computer's 48-bit MAC 

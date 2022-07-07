@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- Publish Configurations -->
+		<PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
+		<DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+		<DebugType Condition="'$(Configuration)' == 'Release'">None</DebugType>
+
+		<!-- Assembly Information -->
+		<RootNamespace>MagicPacket</RootNamespace>
+		<AssemblyName>MagicPacket.Library</AssemblyName>
+
+		<!-- Package Information -->
+		<Version>1.0.0</Version>
+		<Title>Magic Packet</Title>
+		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
+		<Authors>Ken Svensson</Authors>
+		<Company>Ceronus</Company>
+		<Copyright>Copyright © Ceronus 2022</Copyright>
+		<RepositoryUrl>https://github.com/ceronus/magic-packet</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IsPackable>true</IsPackable>
+
+		<PackageTags>wol</PackageTags>
+		<PackageIcon>icon-256x256.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIconUrl>https://github.com/ceronus/magic-packet/icons/icon-64x64.png</PackageIconUrl>
+
+	</PropertyGroup>
+
+</Project>

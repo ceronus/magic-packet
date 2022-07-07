@@ -6,7 +6,7 @@ using System.Net.Sockets;
 
 namespace MagicPacket;
 
-public class MagicPacketClient : IDisposable
+public class MagicPacketClient : IMagicPacketClient
 {
     private const int ReservedPortNumber = 0;
     private const int EchoProtocolPortNumber = 7;
@@ -21,26 +21,26 @@ public class MagicPacketClient : IDisposable
         _client = client ?? new();
     }
 
-    public Task BroadcastSingleInterfaceAsync(string target, string broadcast, CancellationToken cancellationToken = default)
-        => BroadcastSingleInterfaceAsync(ConvertMacAddressStringToPhysicalAddress(target), IPAddress.Parse(broadcast), null, cancellationToken);
+    public Task BroadcastOnSingleInterfaceAsync(string target, string broadcast, CancellationToken cancellationToken = default)
+        => BroadcastOnSingleInterfaceAsync(ConvertMacAddressStringToPhysicalAddress(target), IPAddress.Parse(broadcast), null, cancellationToken);
 
-    public Task BroadcastSingleInterfaceAsync(string target, string broadcast, string? password, CancellationToken cancellationToken = default)
-        => BroadcastSingleInterfaceAsync(ConvertMacAddressStringToPhysicalAddress(target), IPAddress.Parse(broadcast), password, cancellationToken);
+    public Task BroadcastOnSingleInterfaceAsync(string target, string broadcast, string? password, CancellationToken cancellationToken = default)
+        => BroadcastOnSingleInterfaceAsync(ConvertMacAddressStringToPhysicalAddress(target), IPAddress.Parse(broadcast), password, cancellationToken);
 
-    public async Task BroadcastSingleInterfaceAsync(PhysicalAddress target, IPAddress broadcast, string? password = null, CancellationToken cancellationToken = default)
+    public async Task BroadcastOnSingleInterfaceAsync(PhysicalAddress target, IPAddress broadcast, string? password = null, CancellationToken cancellationToken = default)
         => await SendMagicPacketAsync(target, broadcast, password, cancellationToken).ConfigureAwait(false);
 
-    public Task BroadcastAllInterfacesAsync(string target, CancellationToken cancellationToken = default)
-    => BroadcastAllInterfacesAsync(ConvertMacAddressStringToPhysicalAddress(target), null, cancellationToken);
+    public Task BroadcastOnAllInterfacesAsync(string target, CancellationToken cancellationToken = default)
+    => BroadcastOnAllInterfacesAsync(ConvertMacAddressStringToPhysicalAddress(target), null, cancellationToken);
 
-    public Task BroadcastAllInterfacesAsync(string target, string? password, CancellationToken cancellationToken = default)
-        => BroadcastAllInterfacesAsync(ConvertMacAddressStringToPhysicalAddress(target), password, cancellationToken);
+    public Task BroadcastOnAllInterfacesAsync(string target, string? password, CancellationToken cancellationToken = default)
+        => BroadcastOnAllInterfacesAsync(ConvertMacAddressStringToPhysicalAddress(target), password, cancellationToken);
 
-    public async Task BroadcastAllInterfacesAsync(PhysicalAddress target, string? password = null, CancellationToken cancellationToken = default)
+    public async Task BroadcastOnAllInterfacesAsync(PhysicalAddress target, string? password = null, CancellationToken cancellationToken = default)
     {
         foreach (IPAddress broadcast in GetIPv4BroadcastAddresses())
         {
-            await BroadcastSingleInterfaceAsync(target, broadcast, password, cancellationToken).ConfigureAwait(false);
+            await BroadcastOnSingleInterfaceAsync(target, broadcast, password, cancellationToken).ConfigureAwait(false);
         }
     }
 

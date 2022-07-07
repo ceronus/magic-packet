@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Globalization;
 
-namespace MagicPacket;
+namespace MagicPacket.ConsoleApp;
 
 public static class ArgumentsParser
 {

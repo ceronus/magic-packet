@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace MagicPacket;
+namespace MagicPacket.ConsoleApp;
 
 public class Program
 {
@@ -37,10 +37,10 @@ public class Program
                 : new CancellationTokenSource(timeout).Token;
 
             if (string.IsNullOrWhiteSpace(broadcast))
-                await client.BroadcastAllInterfacesAsync(target, password, cancellationToken).ConfigureAwait(true);
+                await client.BroadcastOnAllInterfacesAsync(target, password, cancellationToken).ConfigureAwait(true);
             else
             {
-                await client.BroadcastSingleInterfaceAsync(target, broadcast, password, cancellationToken).ConfigureAwait(true);
+                await client.BroadcastOnSingleInterfaceAsync(target, broadcast, password, cancellationToken).ConfigureAwait(true);
             }
         }
         catch (ArgumentException ex)

@@ -3,7 +3,7 @@
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
 ### Features
-- Suppors use of Secure-On passwords.
+- Supports use of Secure-On passwords.
 - Configuration file for easy setup and use.
 - On-demand configuration as arguments (bypass the configuration file).
 - Supports multiple network interfaces**.

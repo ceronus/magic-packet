@@ -41,8 +41,8 @@ The comments are there to help guide you. (In the below snippet, the comments ha
 }
 ```
 
-- **`Target` (Required)**. The target MAC address, in hexadecimal format. The value can be separated with colons (:) dashes (-), or spaces ( ).
-- **`Broadcast`)** *(Optional)*. The IPv4 broadcast address. If there is no value defined, all available network interfaces will be used.
+- **Target (Required)**. The target MAC address, in hexadecimal format. The value can be separated with colons (:) dashes (-), or spaces ( ).
+- **Broadcast** *(Optional)*. The IPv4 broadcast address. If there is no value defined, all available network interfaces will be used.
 - **Password** *(Optional)*. The SecureOn password, in hexadecimal format. If the value is defined, the value must fit into a 4 or 6 bytes.
 
 *Note: All of these values will be overridden if explicity defined through the arguments when calling the process.*

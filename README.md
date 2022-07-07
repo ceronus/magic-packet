@@ -19,7 +19,7 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 #### Known Limitations
 - The current release does not send using `EtherType 0x0842`.
-- Networks that exclusively use IPv6 only, reqiure manual definition the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
+- Networks that exclusively use IPv6 only, require manual definition the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
 
 
 ## How to Use

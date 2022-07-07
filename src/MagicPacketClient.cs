@@ -88,8 +88,10 @@ public class MagicPacketClient : IDisposable
     public async Task SendMagicPacketAsync(PhysicalAddress target, IPAddress broadcast, string? password, CancellationToken cancellationToken = default)
     {
         byte[] frame = CreateMagicPacketFrame(target, password);
-        Debug.Assert(string.IsNullOrWhiteSpace(password) && frame.Length == 102);
-        Debug.Assert(!string.IsNullOrWhiteSpace(password) && (frame.Length == 106 || frame.Length == 108));
+
+        Debug.Assert(string.IsNullOrWhiteSpace(password)
+            ? frame.Length == 102
+            : (frame.Length is 106 or 108));
 
         // Reserved
         await SendDatagramAsync(frame, broadcast, ReservedPortNumber, cancellationToken).ConfigureAwait(false);

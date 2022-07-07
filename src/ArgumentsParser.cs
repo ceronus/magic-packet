@@ -5,7 +5,7 @@ namespace MagicPacket;
 
 public static class ArgumentsParser
 {
-    public const string ArgumentPrefix = "-";
+    public const char ArgumentPrefix = '-';
 
     public static T? GetValue<T>(string[] args, string argumentName)
     {
@@ -46,9 +46,10 @@ public static class ArgumentsParser
     {
         argument = null;
 
-        if (!arg.StartsWith(ArgumentPrefix, StringComparison.OrdinalIgnoreCase)) return false;
-        if (nextArg.StartsWith(ArgumentPrefix, StringComparison.OrdinalIgnoreCase)) return false;
+        if (!arg.StartsWith($"{ArgumentPrefix}", StringComparison.OrdinalIgnoreCase)) return false;
+        if (nextArg.StartsWith($"{ArgumentPrefix}", StringComparison.OrdinalIgnoreCase)) return false;
 
+        arg = RemoveArgumentPrefix(arg); ;
         if (arg.Equals(argumentName, StringComparison.OrdinalIgnoreCase))
         {
             argument = new(argumentName, nextArg.Replace("\"", string.Empty));
@@ -56,5 +57,15 @@ public static class ArgumentsParser
         }
 
         return false;
+    }
+
+    private static string RemoveArgumentPrefix(ReadOnlySpan<char> value)
+    {
+        for (int i = 0; i < value.Length; i++)
+        {
+            if (value[i] != ArgumentPrefix) return value[i..].ToString();
+        }
+
+        throw new InvalidOperationException("Impossible scenario.");
     }
 }

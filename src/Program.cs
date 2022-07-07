@@ -29,6 +29,8 @@ public class Program
             broadcast = ArgumentsParser.GetValue<string>(args, nameof(broadcast)) ?? broadcast;
             password = ArgumentsParser.GetValue<string>(args, nameof(password)) ?? password;
 
+            Console.WriteLine($"Target: {target}");
+
             int timeout = ArgumentsParser.GetValue<ushort>(args, nameof(timeout));
             CancellationToken cancellationToken = timeout == 0
                 ? default

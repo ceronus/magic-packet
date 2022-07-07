@@ -15,21 +15,28 @@
 		<!-- Assembly Information -->
 		<RootNamespace>MagicPacket</RootNamespace>
 		<AssemblyName>MagicPacket</AssemblyName>
-		<AssemblyTitle>Magic Packet - Wake On LAN</AssemblyTitle>
+		<AssemblyTitle>MagicPacket</AssemblyTitle>
 
 		<!-- Package Information -->
-		<Title>Magic Packet - Wake On LAN</Title>
-		<Description></Description>
+		<Title>Magic Packet</Title>
+		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
 		<Authors>Ken Svensson</Authors>
 		<Company>Ceronus</Company>
 		<Copyright>Copyright © Ceronus 2022</Copyright>
-		<RepositoryUrl>github.com/ceronus/magic-packet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/ceronus/magic-packet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageIcon>icon-256x256.png</PackageIcon>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IsPackable>true</IsPackable>
 		<ApplicationIcon>icon.ico</ApplicationIcon>
+
+		<PackageTags>wol</PackageTags>
+		<PackageIcon>icon-256x256.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIconUrl>https://github.com/ceronus/magic-packet/icons/icon-64x64.png</PackageIconUrl>
 		
 	</PropertyGroup>
 
+	<!-- External Package References -->
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
 	  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />

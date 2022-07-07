@@ -1,4 +1,4 @@
-# ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/src/icon.png) Magic Packet
+# ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-32x32.png) Magic Packet
 
 //[![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 

@@ -25,7 +25,7 @@
 		<Copyright>Copyright © Ceronus 2022</Copyright>
 		<RepositoryUrl>github.com/ceronus/magic-packet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageIcon>icon.png</PackageIcon>
+		<PackageIcon>icon-256x256.png</PackageIcon>
 		<ApplicationIcon>icon.ico</ApplicationIcon>
 		
 	</PropertyGroup>

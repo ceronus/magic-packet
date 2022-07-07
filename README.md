@@ -2,25 +2,76 @@
 
 A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
+### Features
+- Suppors use of Secure-On passwords.
+- Configuration file for easy setup and use.
+- On-demand configuration as arguments (bypass the configuration file).
+- Supports multiple network interfaces**.
+- Supports targeting machines on remote networks (explicity define the broadcast address).
+- Broadcasts on the following ports:
+  - Reserved Port Number (Port 0)
+  - Echo Protocol (Port 7)
+  - Discard Protocol (Port 9)
+
+***Note: The default behavior is to broadcast on every network interface, to change this, explicity define the broadcast endpoint in the configuration file or as an input argument when running the application.*
+
+### Known Limitations
+- The current release does not send using `EtherType 0x0842`.
+- Networks that exclusively use IPv6 only, reqiure manual definition the broadcast address, as the automated broadcast address discovery function requires IPv4 to work.
+
 [![Continuous Integration](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ceronus/magic-packet/actions/workflows/continuous-integration.yml)
 
 ## Portable Binary Downloads
 There are portable binaries for the following platforms:
 
-#### Windows
-- [Windows 64-bit (win-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x64.zip)
-- [Windows 32-bit (win-x86)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x86.zip)
-- [Windows ARM 32-bit (win-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm.zip)
-- [Windows ARM 64-bit (win-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm64.zip)
+- Windows
+  - [Windows 64-bit (win-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x64.zip)
+  - [Windows 32-bit (win-x86)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-x86.zip)
+  - [Windows ARM 32-bit (win-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm.zip)
+  - [Windows ARM 64-bit (win-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/win-arm64.zip)
 
-#### Linux
-- [Linux 64-bit (linux-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-x64.zip)
-- [Linux ARM 32-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-arm.zip)
+- Linux
+  - [Linux 64-bit (linux-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-x64.zip)
+  - [Linux ARM 32-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/linux-arm.zip)
 
-#### macOS
-- [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/osx-x64.zip)
+- macOS
+  - [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.0.0/osx-x64.zip)
 
 For previous releases you can find them [here](https://github.com/ceronus/magic-packet/releases).
+
+
+## How to Use
+1. Download the [portable executable file](https://github.com/ceronus/magic-packet#portable-binary-downloads) for your platform or compile the program from the source.
+2. Open `configuration.json` to configure the target machine MAC address that you wish to send the magic packet to
+3. Run the `MagicPacket.exe`
+
+As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as `--target 00:00:00:00:00:00`.
+Note that any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.
+
+### Configuration File
+The configuration file is quite simple, it has 
+```json
+{
+  // Note. All of these values will be overridden if explicity 
+  // defined through the arguments when calling the process.
+  // Example:
+  //    ./MagicPacket.exe --Target 00:00:00:00:00:00
+
+  // Required. The target MAC address, in hexadecimal format
+  // The value can be separated with colons (:) dashes (-), or spaces ( ).
+  "Target": "00-00-00-00-00-00",
+
+  // Optional. The IPv4 broadcast address.
+  // If there is no value defined, all available network interfaces will be used.
+  "Broadcast": "",
+
+  // Optional. The SecureOn password, in hexadecimal format.
+  // If the value is defined, the value must fit into a 4 or 6 bytes.
+  "Password": ""
+}
+```
+
+
 
 ## Standards and References
 This implementation follows the specifications outlined in the 

@@ -24,6 +24,22 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 
 -------------------------------------------
 
+## How to Use
+
+The simplest way to use this library is:
+
+```csharp
+using MagicPacketClient client = new();
+string target = "00:00:00:00:00:00"; // The MAC address of the target device
+await client.BroadcastOnAllInterfacesAsync(target);
+```
+
+#### Useful Links
+Please take a look at the [example implementation source code](https://github.com/ceronus/magic-packet/tree/master/src/ConsoleApp)
+or you may want the [ready-to-go cross-platform portable binaries](https://github.com/ceronus/magic-packet).
+
+-------------------------------------------
+
 ## Standards and References
 This implementation follows the specifications outlined in the 
 [Magic Packet Technology, Whitepaper](https://github.com/ceronus/magic-packet/blob/master/docs/20213-amd-magic-packet-technology-whitepaper.pdf) 

@@ -5,11 +5,15 @@ on:
     branches: [ "master" ]
     paths-ignore:
       - '.github/**'
+      - '.docs/**'
+      - '.icons/**'
   
   pull_request:
     branches: [ "master" ]
     paths-ignore:
       - '.github/**'
+      - '.docs/**'
+      - '.icons/**'
 
 jobs:
   build:

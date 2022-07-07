@@ -36,9 +36,9 @@
 	
 	<!-- Include Package Files -->
 	<ItemGroup>
-		<!--<None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />-->
-		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
-		<None Include="..\..\icons\icon-256x256.png" Pack="true" PackagePath="\" />
+		<!--<None Include="..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />-->
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\icons\icon-256x256.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>

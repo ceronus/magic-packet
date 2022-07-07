@@ -2,21 +2,30 @@
 
 # ![Logo](https://raw.githubusercontent.com/ceronus/magic-packet/master/icons/icon-64x64.png) Magic Packet
 
-This program is a C# implementation of the Magic Packet -- most commonly known for its implementation in Wake-on-LAN.
+A light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.
 
+
+## Standards and References
 This implementation follows the specifications outlined in the 
-[Magic Packet Technology, Whitepaper](https://github.com/ceronus/magic-packet/docs/20213-amd-magic-packet-technology-whitepaper.pdf) 
+[Magic Packet Technology, Whitepaper](https://github.com/ceronus/magic-packet/blob/master/docs/20213-amd-magic-packet-technology-whitepaper.pdf) 
 which was originally proposed by AMD and Hewlett Packard back in 1995.
 
 In addition to following the specification, the program also has support for Secure-On passwords (which was added later). 
-A [good resource](https://github.com/ceronus/magic-packet/docs/dp83822-texas-instruments-wake-on-lan.pdf) 
-that was published by Texas Instruments covers the entire specification and was also referenced.
+Another [good resource published by Texas Instruments](https://github.com/ceronus/magic-packet/blob/master/docs/dp83822-texas-instruments-wake-on-lan.pdf) 
+covers the entire specification and was also referenced.
 
 
-## Background
+## What is Wake-on-LAN?
+Wake-on-LAN (WOL) is an Ethernet or Token Ring computer networking standard that allows a computer to be turned on or awakened by a network message.
 
+The message is usually sent to the target computer by a program executed on a device connected to the same local area network. It is also possible to initiate the message from another network by using subnet directed broadcasts or a WoL gateway service.
+
+Equivalent terms include wake on WAN, remote wake-up, power on by LAN, power up by LAN, resume by LAN, resume on LAN and wake up on LAN.
+
+
+## What is a Magic Packet?
 The magic packet is a frame that is most often sent as a broadcast and that contains anywhere within its payload 6 bytes 
-of all 255 (`FF FF FF FF FF FF` in hexadecimal), followed by 16 repetitions of the target computer's 48-bit MAC 
+of all 255 (e.g., `FF FF FF FF FF FF` in hexadecimal), followed by 16 repetitions of the target computer's 48-bit MAC 
 address, for a total of 102 bytes.
 
 Since the magic packet is only scanned for the string above, and not actually parsed by a full protocol stack, it could be

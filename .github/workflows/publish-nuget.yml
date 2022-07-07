@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v2
       with:
         source-url: ${{ env.NUGET_SOURCE_URL }}
         dotnet-version: 6.x
@@ -28,7 +28,7 @@ jobs:
       working-directory: src
 
     - name: Publish package to nuget.org registry (dotnet nuget push)
-      run: dotnet nuget push **/publish/*.nupkg --api-key ${{ env.NUGET_AUTH_TOKEN}} --source ${{ env.NUGET_SOURCE_URL }} --no-symbols true --skip-duplicate
+      run: dotnet nuget push **/publish/*.nupkg --api-key ${{ env.NUGET_AUTH_TOKEN}} --source ${{ env.NUGET_SOURCE_URL }} --no-symbols --skip-duplicate
       
 
 # TODO: Create and additional job for GitHub 

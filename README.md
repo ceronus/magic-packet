@@ -27,12 +27,6 @@ A cross-platform, light-weight implementation of the Magic Packet -- most common
 2. Open `configuration.json` to configure the target machine MAC address that you wish to send the magic packet to
 3. Run the `MagicPacket.exe`
 
-As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as
-```
-./MagicPacket.exe --target 00:00:00:00:00:00
-```
-
-*Note: Any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.*
 
 ### Configuration File
 The configuration file is in a JSON with comments format.
@@ -51,6 +45,15 @@ The comments are there to help guide you. (In the below snippet, the comments ha
 - **Password** *(Optional)*. The SecureOn password, in hexadecimal format. If the value is defined, the value must fit into a 4 or 6 bytes.
 
 *Note: All of these values will be overridden if explicity defined through the arguments when calling the process.*
+
+
+### On-Demand Configuration
+As an alternative to configuring the JSON file, the program supports passing in the arguments explicity such as:
+```
+./MagicPacket.exe --target 00:00:00:00:00:00
+```
+
+*Note: Any arguments passed explicity will override / supercede any values configured in the `configuration.json` file.*
 
 
 ## Portable Binary Downloads

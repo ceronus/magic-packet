@@ -16,7 +16,7 @@
 		<AssemblyName>MagicPacket</AssemblyName>
 
 		<!-- Package Information -->
-		<Version>1.1.4</Version>
+		<Version>1.1.5</Version>
 		<Title>Magic Packet</Title>
 		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
 		<NeutralLanguage>en-US</NeutralLanguage>

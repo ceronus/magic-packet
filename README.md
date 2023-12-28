@@ -64,17 +64,18 @@ As an alternative to configuring the JSON file, the program supports passing in 
 There are portable binaries for the following platforms:
 
 - Windows
-  - [Windows 64-bit (win-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/win-x64.zip)
-  - [Windows 32-bit (win-x86)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/win-x86.zip)
-  - [Windows ARM 32-bit (win-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/win-arm.zip)
-  - [Windows ARM 64-bit (win-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/win-arm64.zip)
+	- [Windows ARM 64-bit (win-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/win-arm64.zip)
+	- [Windows 64-bit (win-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/win-x64.zip)
+	- [Windows 32-bit (win-x86)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/win-x86.zip)
 
 - Linux
-  - [Linux 64-bit (linux-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/linux-x64.zip)
-  - [Linux ARM 32-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/linux-arm.zip)
+	- [Linux ARM 32-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/linux-arm.zip)
+	- [Linux ARM 64-bit (linux-arm)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/linux-arm64.zip)
+	- [Linux 64-bit (linux-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/linux-x64.zip)
 
 - macOS
-  - [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.1.5/osx-x64.zip)
+	- [macOS ARM 64-bit (osx-arm64)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/osx-arm64.zip)
+	- [macOS 64-bit (osx-x64)](https://github.com/ceronus/magic-packet/releases/download/v1.2.0/osx-x64.zip)
 
 For previous releases you can find them [here](https://github.com/ceronus/magic-packet/releases).
 

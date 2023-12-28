@@ -7,7 +7,7 @@ on:
 jobs:
   NuGet:
     
-    runs-on: windows-2022
+    runs-on: windows-latest
     env:
       NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
       NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY }} 
@@ -15,13 +15,13 @@ jobs:
     steps:
     
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v3
       with:
         source-url: ${{ env.NUGET_SOURCE_URL }}
-        dotnet-version: 6.x
+        dotnet-version: 8.x
     
     - name: Build solution and create nuget package (dotnet pack)
       run: dotnet pack --configuration release --output publish

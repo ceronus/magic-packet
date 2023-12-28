@@ -1,6 +1,9 @@
 @echo off
 :: *********************************** SETTINGS ***********************************
 
+:: Set the the target framework
+set "TargetFramework=net8.0"
+
 :: Set the project name to build / publish
 set "ProjectName=ConsoleApp.csproj"
 
@@ -9,7 +12,7 @@ set "PublishProfilePath=ConsoleApp\Properties\PublishProfiles"
 
 :: Set the output directory as defined in each publish profile
 :: Make sure that the publish profiles all go to the same place.
-set "OutputDirectory=.\bin\Publish\net6.0"
+set "OutputDirectory=.\bin\Publish"
 
 :: Set to true, if you want to delete all the publish files and only ouput the
 :: archive (.zip) files only. Otherwise, set to false to keep both.
@@ -17,7 +20,7 @@ set "OnlyOutputArchiveFiles=true"
 
 :: Set the list of publish profiles to excuted (comma-separated)
 :: Do not use spaces.
-set "PublishProfiles=linux-arm,linux-x64,osx-x64,win-arm,win-arm64,win-x64,win-x86"
+set "PublishProfiles=linux-arm,linux-arm64,linux-x64,osx-x64,osx-arm64,win-arm64,win-x64,win-x86"
 
 :: ********************************************************************************
 
@@ -31,7 +34,7 @@ rd /s  /q %OutputDirectory%
 for %%p in (%PublishProfiles%) do (
   echo %%p
   :: Execute dotnet publish
-  dotnet publish %ProjectName% /p:PublishProfile=%PublishProfilePath%\%%p.pubxml /p:DebugType=None /p:DebugSymbols=false /p:Configuration=Release
+  dotnet publish %ProjectName% /p:PublishProfile=%PublishProfilePath%\%%p.pubxml /p:Framework=%TargetFramework% /p:DebugType=None /p:DebugSymbols=false /p:Configuration=Release
   :: Create the archive (.zip) file
   powershell.exe -nologo -noprofile -command "Compress-Archive -Path %OutputDirectory%\%%p -DestinationPath %OutputDirectory%\%%p"
   :: Delete the directory and files from dotnet publish (only keep the archive file)

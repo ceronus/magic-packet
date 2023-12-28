@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		
-		<TargetFramework>net6.0</TargetFramework>
+
+		<TargetFrameworks>net6.0;net7.0;net8.0;</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<OutputType>Exe</OutputType>
@@ -17,12 +17,12 @@
 		<AssemblyName>Magic Packet</AssemblyName>
 
 		<!-- Package Information -->
-		<Version>1.1.5</Version>
+		<Version>1.2.0</Version>
 		<Title>Magic Packet</Title>
 		<Description>A cross-platform, light-weight implementation of the Magic Packet -- most commonly known for its use in Wake-on-LAN.</Description>
 		<Authors>Ken Svensson</Authors>
 		<Company>Ceronus</Company>
-		<Copyright>Copyright © Ceronus 2022</Copyright>
+		<Copyright>Copyright © Ceronus 2024</Copyright>
 		<RepositoryUrl>https://github.com/ceronus/magic-packet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
